@@ -1,9 +1,6 @@
-
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {User} from "./user"
-import { resolve } from 'url';
-import { reject } from 'q';
 import {environment} from '../environments/environment'
 import { Repo } from './repo';
 @Injectable({
@@ -22,7 +19,7 @@ export class SearchService {
     }
     let user = new User("","",0,0,"","","",0);
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(data => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=${environment.apiKey}`).toPromise().then(data => {
         user.name = data["login"];
         user.url = data["html_url"]
         user.created_at = data["created_at"]
@@ -54,7 +51,7 @@ export class SearchService {
     }
     let repos = [];
     let promise = new Promise((resolve,reject) => {
-      this.http.get(`https://api.github.com/users/${name}/repos?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(response => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(response => {
         for(let i = 0; i < response["length"];i++) {
           let newRepo = new Repo("","",0,0,"","",0)
           newRepo.name = response[i]["name"];
@@ -63,13 +60,13 @@ export class SearchService {
           newRepo.stars = response[i]["stargazers_count"];
           newRepo.watches = response[i]["watchers"];
           newRepo.url = response[i]["html_url"];
-          console.log(newRepo)
           repos.push(newRepo)
         }
-        console.log(repos)
+      }, err => {
+        alert("Repo npt found");
+        reject(err);
       })
     })
-    console.log(repos)
     return repos
   }
 }
