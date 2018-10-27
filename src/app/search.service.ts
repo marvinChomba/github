@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {User} from "./user"
@@ -19,12 +20,13 @@ export class SearchService {
       followers:number;
       following:number;
     }
-    let user = new User("","",0,0,"","","");
+    let user = new User("","",0,0,"","","",0);
     let promise = new Promise((resolve,reject) => {
       this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=${environment.apiKey}`).toPromise().then(data => {
         user.name = data["login"];
         user.url = data["html_url"]
         user.created_at = data["created_at"]
+        user.repos = data["public_repos"]
         user.avatar = data["avatar_url"];
         user.bio = data["bio"];
         user.followers = data["followers"];
@@ -42,11 +44,20 @@ export class SearchService {
     return user;
   }
   getRepo(name) {
+    interface ApiData {
+      name:string;
+      description:string;
+      forks:number;
+      languagr:string;
+      watches:string;
+      url:string;
+      stars:number
+    }
     let repos = [];
+    let newRepo = new Repo("","",0,0,"","",0)
     let promise = new Promise((resolve,reject) => {
       this.http.get(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
         for(let i = 0; i < data["length"]; i++) { 
-          let newRepo = new Repo("","",0,0,"","",0)
           newRepo.name = data[i]["name"];
           newRepo.description = data[i]["description"];
           newRepo.forks = data[i]["forks"];
@@ -56,6 +67,10 @@ export class SearchService {
           newRepo.stars = data[i]["stargazers_count"]
           repos.push(newRepo)
         }
+        resolve()
+      },err => {
+        newRepo.name = "Repo not found"
+        reject(err);
       })
     })
     return repos
