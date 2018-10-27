@@ -7,7 +7,7 @@ import {HttpClientModule} from "@angular/common/http"
 import { SearchService } from './search.service';
 import { UserComponent } from './user/user.component';
 import { RepoDetailsComponent } from './repo-details/repo-details.component';
-// import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { DatePipe } from './date.pipe';
 import { LandComponent } from './land/land.component';
 import {RoutingModule} from "./routing/routing.module";
@@ -26,7 +26,7 @@ import { BoldsDirective } from './bolds.directive'
     HttpClientModule,
     NgProgressModule.forRoot(),
     NgProgressHttpModule.forRoot(),
-    // LoadingBarHttpClientModule,
+    LoadingBarHttpClientModule,
     RoutingModule
   ],
   providers: [SearchService],
