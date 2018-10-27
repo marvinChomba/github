@@ -36,16 +36,16 @@ Github search uses the Github API to allow users to search for users and reposit
 ### Setup
 1. To access this project, you will need to clone it.
 2. Use this command in your terminal.
-`git clone https://github.com/marvinChomba/github-search`
+`git clone https://github.com/marvinChomba/github`
 3. __Enjoy__
 
 ### Known Bugs
 There are no known bugs. Contact marvin.chomba24@gmail.com incase of any bugs
 
 ### Live site
-You can view the live site [here](https://marvinchomba.github.io/github-search/)
+You can view the live site [here](https://marvinchomba.github.io/github/)
 
 ### Licence
-This project is under the [MIT](https://github.com/marvinChomba/github-search/blob/master/LICENSE) licence
+This project is under the [MIT](https://github.com/marvinChomba/github/blob/master/LICENSE) licence
 
 Copyright (c) 2018 marvinchomba
