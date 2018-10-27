@@ -32,12 +32,10 @@ h1 {
   color: black;
   margin-top: 20px;
   padding: 20px;
-  /* max-height: 470px; */
   margin-left: 1%;
   border-radius: 8px;
   position: relative;
   left: 12%;
-  /* width: 850px; */
 }
 #profile button {
   height: 50px;

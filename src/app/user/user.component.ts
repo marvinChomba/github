@@ -33,11 +33,7 @@ export class UserComponent implements OnInit {
   searchRepo() {
     let toSearch = $("#repoSearch").val();
     this.repos.forEach(element => {
-      if(element.name.indexOf(toSearch) === -1) {
-        element.display = false;
-      } else {
-        element.display = true;
-      }
+      element.name.indexOf(toSearch) === -1 ? element.display = false : element.display = true;
     });
     $("#repoSearch").val("")
   }
