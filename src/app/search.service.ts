@@ -40,7 +40,6 @@ export class SearchService {
         reject(err);
       })
     })
-    console.log(user)
     return user;
   }
   getRepo(name) {
@@ -48,31 +47,29 @@ export class SearchService {
       name:string;
       description:string;
       forks:number;
-      languagr:string;
+      language:string;
       watches:string;
       url:string;
       stars:number
     }
     let repos = [];
-    let newRepo = new Repo("","",0,0,"","",0)
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
-        for(let i = 0; i < data["length"]; i++) { 
-          newRepo.name = data[i]["name"];
-          newRepo.description = data[i]["description"];
-          newRepo.forks = data[i]["forks"];
-          newRepo.language = data[i]["language"];
-          newRepo.watches = data[i]["watches"];
-          newRepo.url = data[i]["html_url"]
-          newRepo.stars = data[i]["stargazers_count"]
+      this.http.get(`https://api.github.com/users/${name}/repos?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(response => {
+        for(let i = 0; i < response["length"];i++) {
+          let newRepo = new Repo("","",0,0,"","",0)
+          newRepo.name = response[i]["name"];
+          newRepo.forks = response[i]["forks"];
+          newRepo.language = response[i]["language"];
+          newRepo.stars = response[i]["stargazers_count"];
+          newRepo.watches = response[i]["watchers"];
+          newRepo.url = response[i]["html_url"];
+          console.log(newRepo)
           repos.push(newRepo)
         }
-        resolve()
-      },err => {
-        newRepo.name = "Repo not found"
-        reject(err);
+        console.log(repos)
       })
     })
+    console.log(repos)
     return repos
   }
 }
