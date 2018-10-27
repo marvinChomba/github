@@ -43,10 +43,10 @@ export class SearchService {
   }
   getRepo(name) {
     let repos = [];
+    let newRepo = new Repo("","",0,0,"","",0)
     let promise = new Promise((resolve,reject) => {
       this.http.get(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
         for(let i = 0; i < data["length"]; i++) { 
-          let newRepo = new Repo("","",0,0,"","",0)
           newRepo.name = data[i]["name"];
           newRepo.description = data[i]["description"];
           newRepo.forks = data[i]["forks"];
@@ -56,6 +56,10 @@ export class SearchService {
           newRepo.stars = data[i]["stargazers_count"]
           repos.push(newRepo)
         }
+        resolve()
+      },err => {
+        newRepo.name = "Repo not found"
+        reject(err);
       })
     })
     return repos
