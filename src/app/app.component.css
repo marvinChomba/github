@@ -1,0 +1,24 @@
+body {
+  background: #607D8B;
+  color: white;
+  min-height: 680px;
+  font-family: Karla;
+  overflow-x: hidden;
+}
+a {
+  color: white;
+  margin-right: 2%;
+  border: 1px solid white;
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.active,a:hover {
+  color: #607D8B;
+  background: white;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+}

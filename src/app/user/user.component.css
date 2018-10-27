@@ -1,0 +1,78 @@
+.form {
+  text-align: center;
+  padding-top: 2%;
+}
+.form input {
+  margin-right: 10px;
+}
+.form button {
+  width: 60px;
+}
+img {
+  border-radius: 7px;
+}
+h1 {
+  font-family: Chakra Petch;
+  font-size: 60px;
+}
+.fa-github {
+  margin-top: 6px;
+}
+#user-details {
+  width: 80%;
+}
+.details1 {
+  width: 300px;
+}
+#repos {
+  display: flex;
+}
+#profile {
+  background: whitesmoke;
+  color: black;
+  margin-top: 20px;
+  padding: 20px;
+  /* max-height: 470px; */
+  margin-left: 1%;
+  border-radius: 8px;
+  position: relative;
+  left: 12%;
+  /* width: 850px; */
+}
+#profile button {
+  height: 50px;
+  
+}
+#profile img {
+  height: 250px;
+}
+ngx-loading-bar {
+  color: black;
+}
+#error {
+  font-family: Chakra Petch;
+}
+.btn-container {
+  padding-bottom: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.repo-btn-container {
+  text-align: center;
+  width: 100%;
+}
+.repo-btn-container button {
+  width: 60px;
+}
+#viewAll {
+  width: 80px;
+  margin-left: 20px;
+}
+@media(max-width: 1000px) {
+  #user-details {
+    width: 65%;
+  }
+  img {
+    display: none;
+  }
+}

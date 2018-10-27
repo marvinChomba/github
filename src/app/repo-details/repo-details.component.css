@@ -1,0 +1,50 @@
+#repos {
+  border: 1px solid white;
+  background: whitesmoke;
+  color: black;
+  /* box-shadow: -1px 1px 16px -1px rgba(255,255,255,0.75); */
+  margin-top: 20px;
+  padding: 30px;
+  /* max-height: 300px; */
+}
+.contain {
+  display: flex;
+  width: 900px;
+  justify-content: space-around;
+  /* border: 1px solid white; */
+  margin-left: 13%;
+  margin-top: 4%;
+}
+#repoLink {
+  text-decoration: none;
+}
+@media(max-width: 800px) and (min-width: 600px) {
+  .contain {
+    margin-left: 0;
+  }
+  #repos {
+    max-width: 400px;
+    margin-left: 0;
+    position: relative;
+    right: 30%;
+  }
+}
+@media(max-width:600px) {
+  .contain {
+    margin-left: 0;
+  }
+  #repos {
+    max-width: 250px;
+  }
+}
+@media(max-width: 1000px) and (min-width: 600px) {
+  #repos {
+    margin-left: 0;
+    max-width: 400px;
+  }
+  .contain {
+    position: relative;
+    right: 5%;
+    /* border: 1px solid black; */
+  }
+}
