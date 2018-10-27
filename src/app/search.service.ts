@@ -42,10 +42,19 @@ export class SearchService {
     return user;
   }
   getRepo(name) {
+    interface ApiData {
+      name:string;
+      description:string;
+      forks:number;
+      languagr:string;
+      watches:string;
+      url:string;
+      stars:number
+    }
     let repos = [];
     let newRepo = new Repo("","",0,0,"","",0)
     let promise = new Promise((resolve,reject) => {
-      this.http.get(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
         for(let i = 0; i < data["length"]; i++) { 
           newRepo.name = data[i]["name"];
           newRepo.description = data[i]["description"];
