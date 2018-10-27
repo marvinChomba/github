@@ -22,7 +22,7 @@ export class SearchService {
     }
     let user = new User("","",0,0,"","","",0);
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=${environment.apiKey}`).toPromise().then(data => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(data => {
         user.name = data["login"];
         user.url = data["html_url"]
         user.created_at = data["created_at"]
@@ -56,7 +56,7 @@ export class SearchService {
     let repos = [];
     let newRepo = new Repo("","",0,0,"","",0)
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=${environment.apiKey}`).toPromise().then(data => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(data => {
         for(let i = 0; i < data["length"]; i++) { 
           newRepo.name = data[i]["name"];
           newRepo.description = data[i]["description"];
