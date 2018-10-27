@@ -1,27 +1,51 @@
-# Github
+# Github Search
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+### Author 
+Marvin Kangangi
 
-## Development server
+### Description
+Github search uses the Github API to allow users to search for users and repositories on github
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Tech Used
+1. HTML for setting up the webpage
+2. CSS and Bootsrap for styling the page
+3. JavaScript and jQuery for adding functionality
+4. Git for version control
+5. Angular 6 
+6. Typescript
+7. Visual Studio Code
+8. Github API
 
-## Code scaffolding
+### How to use
+1. When the user opens the page, he/she will see my github profile and my repos.
+2. The user can then navigate to the search page.
+3. He/she can search for any user on github.
+4. He/she can also search for the users repositories.
+5. The user can also navigate to the searched user's github profile.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+    
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Prerequisites
+1. To clone this project to your local folder, you will first need to install git.
+  Use this command in your terminal
+  `$ sudo apt install git-all`
+2. The user will also require angular
+    `$ npm install -g @angular/cli`
 
-## Running unit tests
+### Setup
+1. To access this project, you will need to clone it.
+2. Use this command in your terminal.
+`git clone https://github.com/marvinChomba/github-search`
+3. __Enjoy__
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Known Bugs
+There are no known bugs. Contact marvin.chomba24@gmail.com incase of any bugs
 
-## Running end-to-end tests
+### Live site
+You can view the live site [here](https://marvinchomba.github.io/github-search/)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Licence
+This project is under the [MIT](https://github.com/marvinChomba/github-search/blob/master/LICENSE) licence
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Copyright (c) 2018 marvinchomba

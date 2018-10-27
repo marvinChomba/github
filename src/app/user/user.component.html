@@ -5,7 +5,7 @@
     <input type="text" id="name" class="form-control w-25 d-inline-block" placeholder="Enter Github username" autocomplete="off">
     <button (click)="searchUser()" class="btn btn-info"><span><i class="fas fa-search"></i></span></button>
   </div>
-  <ngx-loading-bar></ngx-loading-bar>
+  <!-- <ngx-loading-bar></ngx-loading-bar> -->
   <div *ngIf="user.name !== 'User not found'">
     <div  id="user-details" *ngIf="user.name.length > 0">
       <div id="profile" class="row">
