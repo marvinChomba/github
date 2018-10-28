@@ -63,7 +63,7 @@ export class SearchService {
           repos.push(newRepo)
         }
       }, err => {
-        alert("Repo npt found");
+        console.log("Repo not found");
         reject(err);
       })
     })
