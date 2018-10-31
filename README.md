@@ -18,13 +18,11 @@ Github search uses the Github API to allow users to search for users and reposit
 
 ### How to use
 1. When the user opens the page, he/she will see my github profile and my repos.
-![landing](https://user-images.githubusercontent.com/40211183/47608079-65255c00-da31-11e8-8e53-47204ad6e1a0.png)
-2. The user can then navigate to the search page.
-![search](https://user-images.githubusercontent.com/40211183/47608119-e0870d80-da31-11e8-84de-b2d896b960ef.png)
-3. He/she can search for any user on github.
-![profile](https://user-images.githubusercontent.com/40211183/47608082-74a4a500-da31-11e8-8a9b-1f7cf14eba48.png)
-4. He/she can also search for the users repositories.
-![screenshot from 2018-10-27 23-26-10](https://user-images.githubusercontent.com/40211183/47608997-bb010080-da3f-11e8-9211-a0a58c455f24.png)5. The user can also navigate to the searched user's github profile.
+![screenshot from 2018-10-28 16-12-01](https://user-images.githubusercontent.com/40211183/47616340-88511980-dacc-11e8-8b50-afa5302248a6.png)2. The user can then navigate to the search page.
+![screenshot from 2018-10-28 16-12-05](https://user-images.githubusercontent.com/40211183/47616333-7bccc100-dacc-11e8-814a-b39e8333d17d.png)3. He/she can search for any user on github.
+![screenshot from 2018-10-28 16-12-13](https://user-images.githubusercontent.com/40211183/47616331-6fe0ff00-dacc-11e8-9eb3-844abbcf4069.png)4. He/she can also search for the users repositories.
+![screenshot from 2018-10-28 16-12-16](https://user-images.githubusercontent.com/40211183/47616321-4de77c80-dacc-11e8-83e8-704b1afd8122.png)
+5. The user can also navigate to the searched user's github profile.
 
 
     
