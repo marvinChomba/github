@@ -51,7 +51,7 @@ export class SearchService {
     }
     let repos = [];
     let promise = new Promise((resolve,reject) => {
-      this.http.get<ApiData>(`https://api.github.com/users/marvinchomba/repos?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(response => {
+      this.http.get<ApiData>(`https://api.github.com/users/${name}/repos?access_token=284a70214412bb8997800d2a05b0635cf59d5e71`).toPromise().then(response => {
         for(let i = 0; i < response["length"];i++) {
           let newRepo = new Repo("","",0,0,"","",0)
           newRepo.name = response[i]["name"];
